@@ -16,7 +16,6 @@ function App() {
     (async function(){
       try {
         const response = await axios.get('https://countries.tech-savvy.tech/countries')
-        console.log(response)
         setState({...state, countriesList: [...response.data]});
       } catch (err) {
         console.error(err)
@@ -37,14 +36,14 @@ function App() {
           style={{width: "8rem", height: "8rem", position: 'fixed', top: '50%', left: '50%'}}
           role="status"
         >
-          <span class="sr-only">Loading...</span>
+          <span className="sr-only">Loading...</span>
         </div>
       ) : (
         <div className="d-flex align-items-between w-25">
           <div className="container">
             <div className="row">
               <div>
-                <div className="list-group ">
+                <div className="list-group" style={{marginTop: '3.5rem'}}>
                   {state.countriesList.map((country) => (
                       <CountriesList
                       key={country.cca3}

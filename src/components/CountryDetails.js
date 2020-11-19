@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const CountryDetails = (props) => {
-  console.log(props);
   const [state, setState] = useState({
     name: '',
     capital: '',
@@ -41,7 +40,7 @@ const CountryDetails = (props) => {
           style={{width: "8rem", height: "8rem", position: 'fixed', top: '50%', left: '50%'}}
           role="status"
         >
-          <span class="sr-only">Loading...</span>
+          <span className="sr-only">Loading...</span>
         </div>
       ) : (
         <div
