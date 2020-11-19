@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import CountriesList from './components/CountriesList';
 import CountryDetails from './components/CountryDetails';
-import countries from './countries.json';
 import axios from 'axios'
 
 function App() {
@@ -47,12 +46,11 @@ function App() {
               <div>
                 <div className="list-group ">
                   {state.countriesList.map((country) => (
-                    <Link key={country.cca3}>
                       <CountriesList
+                      key={country.cca3}
                         country={country}
                         countriesList={state.countriesList}
                       />
-                    </Link>
                   ))}
                 </div>
               </div>

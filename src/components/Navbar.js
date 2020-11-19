@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Navbar = (props) => {
   return (
-    <nav className="navbar navbar-dark bg-primary mb-3">
+    <nav className="navbar navbar-dark bg-primary">
       <div className="container">
         <Link className="navbar-brand" to="/">
           WikiCountries

@@ -8,6 +8,7 @@ const CountryDetails = (props) => {
     capital: '',
     area: '',
     borders: [],
+    flag: ''
   });
 
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +23,7 @@ const CountryDetails = (props) => {
         capital: country.capital,
         area: country.area,
         borders: country.borders,
+        flag: country.flag
       });
       setIsLoading(false);
     }
@@ -51,23 +53,23 @@ const CountryDetails = (props) => {
             width: '40vw',
           }}
         >
-          <h1>{state.name}</h1>
+          <h1 className='text-center'>{state.flag} {state.name}</h1>
           <table className="table">
             <thead></thead>
             <tbody>
               <tr>
-                <td style={{ width: '30%' }}>Capital</td>
+                <td style={{ width: '30%' }}><strong>Capital</strong></td>
                 <td>{state.capital}</td>
               </tr>
               <tr>
-                <td>Area</td>
+                <td><strong>Area</strong></td>
                 <td>
                   {state.area} km
                   <sup>2</sup>
                 </td>
               </tr>
               <tr>
-                <td>Borders</td>
+                <td><strong>Borders</strong></td>
                 <td>
                   <ul>
                     {state.borders.map((cca3) => {
