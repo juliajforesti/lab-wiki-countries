@@ -44,13 +44,9 @@ function App() {
             <div className="row">
               <div>
                 <div className="list-group" style={{marginTop: '3.5rem'}}>
-                  {state.countriesList.map((country) => (
-                      <CountriesList
-                      key={country.cca3}
-                        country={country}
-                        countriesList={state.countriesList}
-                      />
-                  ))}
+                  <CountriesList
+                    countries={state.countriesList}
+                  />
                 </div>
               </div>
             </div>
